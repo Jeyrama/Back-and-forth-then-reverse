@@ -47,3 +47,5 @@ function arrange(s) {
   }
   return res;
 }
+
+// or
