@@ -49,3 +49,32 @@ function arrange(s) {
 }
 
 // or
+
+function arrange(s) { 
+  let t = [];
+  
+  let length = s.length;
+  let first = 0;
+  let last = length - 1;
+  let shouldReverse = false;
+  
+  while (length > 0) {
+    if (length == 1) {
+      t.push(s[first])
+      length -= 1
+    } else {
+      if (shouldReverse) {
+        t.push(s[last], s[first])
+      } else {
+        t.push(s[first], s[last])
+      }
+      length -= 2
+    }
+
+    first++;
+    last--;
+    
+    shouldReverse = !shouldReverse;
+  }
+  return t;
+}
