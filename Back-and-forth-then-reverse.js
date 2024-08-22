@@ -29,3 +29,21 @@ Note:
 
 
 // Solution
+
+function arrange(s) {
+  let res = []
+  ,     i = 0
+  ,     j = s.length - 1;
+
+  while (i <= j) {
+    if (Math.ceil(res.length / 2) % 2) {
+      res.push(s[j]);
+      j--;
+    }
+    else {
+      res.push(s[i]);
+      i++;
+    }
+  }
+  return res;
+}
